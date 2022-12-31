@@ -6,6 +6,7 @@ function alert(msg) {
 alert(msg)
 }
 
+
 function txtChange(name) {
 // Change text when user click button
 var getText = document.getElementById('txtChangeConfirmAlert')
@@ -28,15 +29,25 @@ wrapper.innerHTML = [
 alertPlaceholder.append(wrapper)
 }
 
-var confrm = confirm("Apakah nama kamu mau di tampilin?");
+function confirmTxtChange(nama) {
+  var confrm = confirm("Apakah nama kamu mau di tampilin?");
 
 if (confrm) {
-var nama = prompt('Sebutkan nama kamu...', "di rahasiakan!")
 txtChange(nama)
 alertBootstrap(`Thankyou ${nama} :)`, 'success')
 } else {
 alertBootstrap('Baiklah, kami tidak memaksa!')
 }
+}
+
+let confirmName = prompt("Siapa nama anda?")
+let confirmPassword = prompt('Masukan password anda!')
+if (confirmName === 'admin' && confirmPassword === 'admin') {
+  confirmTxtChange(confirmName)
+} else {
+  window.location.href = '/noauth.html'
+}
+
 
 
 var counter = 0
