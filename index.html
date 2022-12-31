@@ -1,73 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ES8 Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-  <script src="//unpkg.com/systemjs@0.19.47/dist/system.js"></script>
+    <title>ES8 Project</title>
+
+    <script src="//unpkg.com/systemjs@0.19.47/dist/system.js"></script>
 </head>
 
 <body>
-  <div id="liveAlertPlaceholder"></div>
-  
- <div class="container-fluid bg-light p-4">
-   <div class="container">
- <h1 id="txtChangeConfirmAlert">Hello World</h1>
-  <br>
-  <h3 id="txtCounter">0</h3>
-  <button id="btnCounter" class="btn btn-primary">click me</button>
-   </div>
- </div>
- <br>
- 
- <!-- card item -->
- <div class="container">
-<div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1593280443077-ae46e0100ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZnJ1aXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60" class="card-img-top" alt="banana" style="width: 100%; height: 250px; object-fit: cover">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go buy</a>
-      </div>
+    <div id="liveAlertPlaceholder"></div>
+
+    <div class="container-fluid bg-light p-4">
+        <div class="container">
+            <h1 id="txtChangeConfirmAlert">Hello World</h1>
+            <br>
+            <h3 id="txtCounter">0</h3>
+            <button id="btnCounter" class="btn btn-primary">click me</button>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-6 mb-3">
-    <div class="card">
-<img src="https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnJ1aXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60" class="card-img-top" alt="kiwi" style="width: 100%; height: 250px; object-fit: cover">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go buy</a>
-      </div>
+    <br>
+
+    <!-- card item -->
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1593280443077-ae46e0100ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZnJ1aXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+                        class="card-img-top" alt="banana" style="width: 100%; height: 250px; object-fit: cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana Spesial</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo sapiente
+                            dolore pariatur eos doloribus. Voluptates vitae consequuntur eaque enim quaerat, maiores
+                            eligendi aperiam, laudantium ullam temporibus rerum, eos id repellat.</p>
+                        <span class="badge text-bg-light">$200</span>
+                        <br>
+                        <br>
+                        <button id="btnBanana" class="btn btn-primary"
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Go
+                            buy</button>
+                        <div class="text-center">
+                            <span id="resultShopBanana" class="badge text-bg-light"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnJ1aXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+                        class="card-img-top" alt="kiwi" style="width: 100%; height: 250px; object-fit: cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Kiwi Spesial</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quo
+                            repudiandae dicta excepturi. Nisi inventore perferendis aspernatur minus error similique
+                            illum magnam deleniti cumque nesciunt a quod, ab itaque necessitatibus.</p>
+                        <span class="badge text-bg-light">$200</span>
+                        <br>
+                        <br>
+                        <button id="btnKiwi" class="btn btn-primary"
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Go
+                            buy</button>
+                        <div class="text-center">
+                            <span id="resultShopKiwi" class="badge text-bg-light"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <span id="resultShopAll" class="badge text-bg-light">Total</span>
+                <br>
+                <br>
+                <button class="btn btn-primary">Checkout</button>
+            </div>
+
+        </div>
     </div>
-  </div>
-</div>
- </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <script src="config.js"></script>
-  <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
